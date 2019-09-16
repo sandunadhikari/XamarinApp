@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:views="clr-namespace:SampleMyApp.Views"
+             mc:Ignorable="d"
+             x:Class="SampleMyApp.Views.UpdatePage">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center">
+            <Label x:Name="txt_welcome" Text="UPDATE ITEM" Font="Bolt,30" TextColor="#17BAEC" HorizontalOptions="Center"/>
+            <views:ItemView/>
+            <Grid Padding="30,0,30,50">
+                <Button Command="{Binding UpdateItemCommand}"  Text="UPDATE" BackgroundColor="#17BAEC" TextColor="#FEFEFE" FontSize="20" BorderRadius="10"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

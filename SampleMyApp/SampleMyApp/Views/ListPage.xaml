@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+             xmlns:views="clr-namespace:SuaveControls.Views;assembly=SuaveControls.FloatingActionButton"
+             mc:Ignorable="d"
+             x:Class="SampleMyApp.Views.ListPage">
+    <ContentPage.Content>
+        <Grid>
+
+            <Grid Padding="0">
+                <StackLayout>
+                    <Label x:Name="txt_welcome" Text="{Binding Welcome}" Font="Bolt,30" TextColor="#17BAEC" HorizontalOptions="Center"/>
+                    <!--<ListView x:Name="lstItems" HasUnevenRows="True" Margin="10" ItemsSource="{Binding ItemList}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <TextCell Text="{Binding Subject}" BindingContext=""></TextCell>
+                                <ViewCell>
+                                    <StackLayout Orientation="Vertical">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="7*"/>
+                                                <ColumnDefinition Width="3*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Label Grid.Row="0" Grid.Column="0" Text="{Binding Subject}" FontSize="30" FontAttributes="Bold" TextColor="Black" VerticalOptions="Center"/>
+                                            <Label Grid.Row="0" Grid.Column="1" Text="{Binding Date}" VerticalOptions="Center"/>
+                                            <Label Grid.Row="1" Grid.Column="0" Text="{Binding Description}" FontSize="20" FontAttributes="Italic"/>
+                                            <ImageButton Grid.Row="1" Grid.Column="1" Command="{Binding ImageButtonCommand}" Source="ic_action_more.png" BackgroundColor="White" HorizontalOptions="End" Padding="5"/>
+                                        </Grid>
+
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>-->
+                    <flv:FlowListView FlowColumnCount="1" HasUnevenRows="True" FlowLastTappedItem="{Binding SelectedItem}" FlowItemsSource="{Binding ItemList}">
+                        <flv:FlowListView.FlowColumnTemplate>
+                            <DataTemplate>
+                                <StackLayout Orientation="Vertical">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="7*"/>
+                                            <ColumnDefinition Width="3*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Label Grid.Row="0" Grid.Column="0" Text="{Binding Subject}" FontSize="30" FontAttributes="Bold" TextColor="Black" VerticalOptions="Center"/>
+                                        <Label Grid.Row="0" Grid.Column="1" Text="{Binding Date}" VerticalOptions="Center"/>
+                                        <Label Grid.Row="1" Grid.Column="0" Text="{Binding Description}" FontSize="20" FontAttributes="Italic"/>
+                                    </Grid>
+
+                                </StackLayout>
+
+                            </DataTemplate>
+                        </flv:FlowListView.FlowColumnTemplate>
+                    </flv:FlowListView>
+
+                    <views:FloatingActionButton x:Name="FAB" HorizontalOptions="End" VerticalOptions="End" Image="ic_action_add.png" Command="{Binding AddCommand}" ButtonColor="#03A9F4"/>
+                </StackLayout>
+
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

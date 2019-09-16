@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SampleMyApp.Views.ItemView">
+  <ContentView.Content>
+        <StackLayout>
+            <Grid Padding="30,0,30,50">
+                <Entry x:Name="txt_subject" Text="{Binding Subject}" Placeholder="Subject"/>
+            </Grid>
+            <Grid Padding="30,0,30,50">
+                <!--<Entry x:Name="txt_date" Placeholder="DD/MM/YYYY"/>-->
+                <DatePicker x:Name="startDatePicker" Date="{Binding Date}"/>
+            </Grid>
+            <Grid Padding="30,0,30,50">
+                <Entry x:Name="txt_description" Text="{Binding Description}" Placeholder="Desctioption"/>
+            </Grid>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

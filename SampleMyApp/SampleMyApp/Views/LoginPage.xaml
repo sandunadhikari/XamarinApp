@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SampleMyApp.Views.LoginPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <!--<Image Grid.Row="0" Source="{local:ImageResource CRUDapp.coastal.png}" VerticalOptions="Center" HorizontalOptions="Center" Margin="30,50,30,0"/>-->
+            <Entry Grid.Row="1" x:Name="txt_username" Text="{Binding Username}" Placeholder="Username" VerticalOptions="Center" Margin="30,0,30,0"/>
+            <Button Grid.Row="2" Text="NEXT" Command="{Binding NextCommand}" VerticalOptions="Center" CornerRadius="10" BackgroundColor="#2193d0" Margin="30,0,30,0" TextColor="White" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
